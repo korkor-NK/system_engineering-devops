@@ -1,17 +1,8 @@
 #!/usr/bin/env bash
-# This script lists each file in the current directory, showing only the part after the first dash if it exists
+# Displays the current directory in list format
+#   Only displays part of the name after first dash 
 
-for file in *; do
-  # Skip hidden files
-  if [[ "$file" == .* ]]; then
-    continue
-  fi
-
-  # If file contains a dash, show part after the first dash
-  if [[ "$file" == *-* ]]; then
-    echo "${file#*-}"
-  else
-    echo "$file"
-  fi
+list=$(ls)
+for i in $list; do
+  echo "$i" | cut -d '-' -f2
 done
-
