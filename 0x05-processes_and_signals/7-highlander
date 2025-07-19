@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Define a function to handle SIGTERM
+trap "echo 'I am invincible!!!'" SIGTERM
+
+# Infinite loop with message and sleep
+while true
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
