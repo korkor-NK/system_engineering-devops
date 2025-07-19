@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script shows the PID and name of bash processes
+
+pgrep -a bash | awk '{print $1, $2}'
