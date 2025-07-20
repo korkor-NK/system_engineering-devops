@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
-# This script runs an infinite loop and prints a message when it receives SIGTERM
+# This script displays 'To infinity and beyond' 
+# Expectations: In between each iteration of the loop, add a sleep 2
 
 trap 'echo "I am invincible!!!"' SIGTERM
-
 while true
 do
-    sleep 1
+    echo "To infinity and beyond"
+    sleep 2
 done
-
-
